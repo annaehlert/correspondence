@@ -1,6 +1,17 @@
 from django.db import models
 
 
+class OwnedModel(models.Model):
+    owner = models.OneToOneField('auth.User', on_delete=models.CASCADE)
+
+    class Meta:
+        abstract = True
+
+
+class Belonging(OwnedModel):
+    name = models.CharField(max_length=100)
+
+
 class Company(models.Model):
     name = models.CharField(max_length=100)
     address = models.CharField(max_length=100)

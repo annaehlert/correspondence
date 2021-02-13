@@ -8,7 +8,7 @@ class CompanyViewset(viewsets.ModelViewSet):
     queryset = models.Company.objects.all()
     serializer_class = serializers.CompanySerializer
 
-
+9
 class SubjectViewset(viewsets.ModelViewSet):
     queryset = models.Subjects.objects.all()
     serializer_class = serializers.SubjectsSerializer
